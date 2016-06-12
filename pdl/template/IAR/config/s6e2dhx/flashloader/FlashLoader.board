@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<flash_board>
+  <pass>
+    <loader>$PROJ_DIR$\config\s6e2dhx\flashloader\FlashS6E2DH.flash</loader>
+    <range>CODE 0x0 0x5ffff</range>
+  </pass>
+</flash_board>
+
+

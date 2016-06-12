@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<vendor>www.spansion.com</vendor>
+	<version>0.1</version>
+	<chip family="FM4" series="S6E2CC" mcu="S6E2CCAJ0xxV2" package="LQFP"/>
+	<peripherals>
+		<peripheral name="GPIO" isEnable="true">
+			<functions>
+				<function name="P1A" pinNumber="108" IODirection="Output" OutputVoltageLevel="High Level" />
+				<function name="P18" pinNumber="106" IODirection="Output" OutputVoltageLevel="Low Level" />
+				<function name="PB2" pinNumber="104" IODirection="Output" OutputVoltageLevel="Low Level" />
+			</functions>
+		</peripheral>
+		<peripheral name="USB" isEnable="true">
+			<functions>
+				<function name="UHCONX0" pinNumber="171" mode="USB;DEVICE;Channel0;" />
+				<function name="UDM0" pinNumber="174" mode="USB;DEVICE;Channel0;" />
+				<function name="UDP0" pinNumber="175" mode="USB;DEVICE;Channel0;" />
+			</functions>
+		</peripheral>
+		<peripheral name="EXTBUS" isEnable="true">
+			<functions>
+				<function name="MAD20_0" pinNumber="39" mode="External Bus Interface;SRAM;" />
+				<function name="MAD19_0" pinNumber="40" mode="External Bus Interface;SRAM;" />
+				<function name="MDQM1_0" pinNumber="22" mode="External Bus Interface;SRAM;" />
+				<function name="MOEX_0" pinNumber="169" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA01_0" pinNumber="3" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA00_0" pinNumber="2" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA05_0" pinNumber="7" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA04_0" pinNumber="6" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA03_0" pinNumber="5" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA02_0" pinNumber="4" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA07_0" pinNumber="9" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA06_0" pinNumber="8" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA14_0" pinNumber="19" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA12_0" pinNumber="17" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA13_0" pinNumber="18" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA10_0" pinNumber="15" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA11_0" pinNumber="16" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA08_0" pinNumber="13" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA09_0" pinNumber="14" mode="External Bus Interface;SRAM;" />
+				<function name="MDQM0_0" pinNumber="21" mode="External Bus Interface;SRAM;" />
+				<function name="MWEX_0" pinNumber="170" mode="External Bus Interface;SRAM;" />
+				<function name="MADATA15_0" pinNumber="20" mode="External Bus Interface;SRAM;" />
+				<function name="MAD10_0" pinNumber="116" mode="External Bus Interface;SRAM;" />
+				<function name="MAD07_0" pinNumber="79" mode="External Bus Interface;SRAM;" />
+				<function name="MAD11_0" pinNumber="117" mode="External Bus Interface;SRAM;" />
+				<function name="MAD06_0" pinNumber="78" mode="External Bus Interface;SRAM;" />
+				<function name="MAD05_0" pinNumber="77" mode="External Bus Interface;SRAM;" />
+				<function name="MAD12_0" pinNumber="118" mode="External Bus Interface;SRAM;" />
+				<function name="MAD13_0" pinNumber="119" mode="External Bus Interface;SRAM;" />
+				<function name="MAD08_0" pinNumber="80" mode="External Bus Interface;SRAM;" />
+				<function name="MAD09_0" pinNumber="81" mode="External Bus Interface;SRAM;" />
+				<function name="MAD01_0" pinNumber="67" mode="External Bus Interface;SRAM;" />
+				<function name="MAD03_0" pinNumber="69" mode="External Bus Interface;SRAM;" />
+				<function name="MAD02_0" pinNumber="68" mode="External Bus Interface;SRAM;" />
+				<function name="MAD15_0" pinNumber="121" mode="External Bus Interface;SRAM;" />
+				<function name="MAD16_0" pinNumber="122" mode="External Bus Interface;SRAM;" />
+				<function name="MAD17_0" pinNumber="123" mode="External Bus Interface;SRAM;" />
+				<function name="MAD18_0" pinNumber="124" mode="External Bus Interface;SRAM;" />
+				<function name="MAD14_0" pinNumber="120" mode="External Bus Interface;SRAM;" />
+				<function name="MAD04_0" pinNumber="76" mode="External Bus Interface;SRAM;" />
+				<function name="MCSX0_0" pinNumber="56" mode="External Bus Interface;SRAM;" />
+			</functions>
+		</peripheral>
+		<peripheral name="CAN" isEnable="true">
+			<functions>
+				<function name="TX1_1" pinNumber="98" mode="CAN;CAN;Channel1;" />
+				<function name="RX1_1" pinNumber="97" mode="CAN;CAN;Channel1;" />
+			</functions>
+		</peripheral>
+		<peripheral name="DEBUG" isEnable="true">
+			<functions>
+				<function name="TRSTX" pinNumber="134" mode="DEBUG;JTAG;" />
+				<function name="TCK" pinNumber="135" mode="DEBUG;JTAG;" />
+				<function name="TDO" pinNumber="138" mode="DEBUG;JTAG;" />
+				<function name="TDI" pinNumber="136" mode="DEBUG;JTAG;" />
+				<function name="TMS" pinNumber="137" mode="DEBUG;JTAG;" />
+			</functions>
+		</peripheral>
+		<peripheral name="CLOCK" isEnable="true">
+			<functions>
+				<function name="X0" pinNumber="86" mode="CLOCK;Main Clock;Oscillation;" />
+				<function name="X1" pinNumber="87" mode="CLOCK;Main Clock;Oscillation;" />
+				<function name="X1A" pinNumber="59" mode="CLOCK;SUB Clock;32KHz Oscillation;" />
+				<function name="X0A" pinNumber="58" mode="CLOCK;SUB Clock;32KHz Oscillation;" />
+			</functions>
+		</peripheral>
+	</peripherals>
+</save>

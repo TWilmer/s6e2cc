@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package schemaVersion="1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+  <vendor>Cypress</vendor>
+  <url>http://www.spansion.com/downloads</url>
+  <name>s6e2ccxj</name>
+  <description>Cypress S6E2CC Series support for J package</description>
+  <releases>
+    <release version="2.0.0" date="30.06.2015 10:00:00">MSCH/ACEH;New MCU Template / Package release, replacing MCU templates before v20</release>
+    <release version="2.0.1" date="03.08.2015 03:46:11">MSCH;Updated generation script to fix FPU and MPU usage for ARM MDK</release>
+    <release version="2.0.2" date="18.08.2015 02:42:33">NOSU;Updated SVD files to improve compatibility with register/bit definitions of MCU templates before v20
+Removed HDMICEC related definitions in S6E2Cx series
+Fixed the folder structure descriptions in Readme.txt</release>
+  </releases>
+  <keywords>
+    <!-- keywords for indexing -->
+    <keyword>Cypress</keyword>
+    <keyword>Device Support</keyword>
+    <keyword>Device Family Package Cypress</keyword>
+    <keyword>FM4</keyword>
+    <keyword>S6E</keyword>
+    <keyword>S6E2</keyword>
+  </keywords>
+  <devices>
+    <!-- generated, do not modify this section! -->
+    <family Dfamily="FM4 Series" Dvendor="Spansion:100">
+      <description>
+The FM4 family of 32-bit, general-purpose MCUs covers the highest end of the product range.
+Based on the ARM Cortex-M4F processor core, the family features DSP and Floating Point Unit (FPU) functions.
+These MCUs are designed for applications that require advanced, high-speed computing performance
+such as general-purpose inverters, servomotors, factory automation, PLCs and other industrial equipment,
+as well as medical and surveillance products, and inverter-based home appliances such as
+washing machines and air conditioners.
+      </description>
+      <feature type="NVIC" n="128" name="NVIC" />
+      <feature type="Memory" n="0x8000" name="SRAM1" />
+      <feature type="Memory" n="0x8000" name="SRAM2" />
+      <feature type="MPSerial" n="16" name="MFS (Multi-Function Serial Interface) : UART, CSIO, LIN, I2C" />
+      <feature type="DMA" n="8" name="DMA Controller" />
+      <feature type="Other" n="256" name="DSTC Controller (Descriptor System data Transfer Controller) (256 channels)" />
+      <feature type="DAC" n="2" m="12" name="DA converter" />
+      <feature type="Timer" n="16" name="Base Timer (Max 16 channels): PWM, PPG, PWC" />
+      <feature type="Timer" n="3" name="Multi-Function Timer (MFT)" />
+      <feature type="RTC" n="1" m="32768" name="Real-time clock (RTC)" />
+      <feature type="Other" n="4" name="Quadrature Position/Revolution Counter (QPRC)" />
+      <feature type="Timer" n="1" name="Dual Timer (32/16-bit Down Counter)" />
+      <feature type="Timer" n="1" name="Watch Counter" />
+      <feature type="ExtInt" n="32" name="External Interrupt Controller Unit" />
+      <feature type="WDT" n="1" name="Watchdog Timer (HW + SW)" />
+      <feature type="Other" n="1" name="CRC (Cyclic Redundancy Check) Accelerator " />
+      <feature type="Other" n="1" name="PRGCRC (Programmable Cyclic Redundancy Check) Accelerator " />
+      <feature type="SDIO" n="1" name="SD Card Interface supported 1-bit or 4-bit data bus" />
+      <feature type="XTAL" n="4000000" m="48000000" name="Main Clock" />
+      <feature type="XTAL" n="30000" m="100000" name="32.768kHz Sub Clock" />
+      <feature type="IntRC" n="4000000" name="Built-in CR High-speed (+/- 2%)" />
+      <feature type="IntRC" n="100000" name="Built-in CR Low-speed" />
+      <feature type="Other" n="1" name="Clock Super Visor (CSV)" />
+      <feature type="Other" n="2" name="Low-Voltage Detector (LVD)" />
+      <feature type="PowerMode" n="6" name="Low-Power Consumption Mode: SLEEP, TIMER, RTC, STOP, Deep standby RTC, Deep standby STOP" />
+      <feature type="ClockOther" n="1" name="Peripheral Clock Gating (PCG)" />
+      <feature type="PowerOther" n="1" name="VBAT - Independent power supply for RTC and 32kHz oscillator" />
+      <feature type="CoreOther" n="1" name="41-bit Unique ID" />
+      <feature type="VCC" n="2.7" m="5.5" />
+      <subFamily DsubFamily="S6E2CC">
+        <processor Dcore="Cortex-M4" DcoreVersion="r0p1" Dfpu="1" Dmpu="1" Dendian="Little-endian" Dclock="200000000" />
+        <debug svd="cmsis\svd\s6e2ccxj.svd" />
+        <memory id="IROM2" start="0x00406000" size="0xA000" startup="0" default="1" />
+        <memory id="IRAM2" start="0x20038000" size="0x10000" init="0" default="0" />
+        <algorithm name="example\ARM\S6E2CC_MACRO0_8KB.FLM" start="0x00406000" size="0x2000" RAMstart="0x2003C000" RAMsize="0x1000" default="1" />
+        <algorithm name="example\ARM\S6E2CC_MACRO1_32KB.FLM" start="0x00408000" size="0x8000" RAMstart="0x2003C000" RAMsize="0x1000" default="1" />
+        <feature type="Memory" n="0xA000" name="Flash memory" />
+        <feature type="ComOther" n="1" name="USB 2.0 (Function / Host)" />
+        <feature type="CAN" n="2" name="CAN Interface, compatible with CAN specification 2.0A/B" />
+        <feature type="CAN" n="1" name="CAN-FD (CAN with flexible data rate, compatible with CAN specification 2.0A/B" />
+        <feature type="ETH" n="1" m="100000000" name="Ethernet MAC" />
+        <!-- *************************  Device 'S6E2CC8J'  ***************************** -->
+        <device Dname="S6E2CC8J">
+          <compile header="common\s6e2ccxj.h" define="S6E2CC8J" />
+          <memory id="IROM1" start="0x00000000" size="0x100000" startup="1" default="1" />
+          <memory id="IRAM1" start="0x1FFF0000" size="0x10000" init="0" default="1" />
+          <algorithm name="example\ARM\S6E2CC_MACRO0_1024KB.FLM" start="0x00000000" size="0x100000" RAMstart="0x2003C000" RAMsize="0x1000" default="1" />
+          <feature type="Memory" n="0x100000" name="Flash memory" />
+          <feature type="Memory" n="0x10000" name="SRAM0" />
+          <feature type="ExtBus" n="16" name="External Bus Interface for SRAM, NOR, NAND FLash and SDRAM" />
+          <feature type="ComOther" n="1" name="High-Speed Quad SPI" />
+          <feature type="IOs" n="152" name="General Purpose I/Os" />
+          <feature type="ADC" n="32" m="12" name="AD converter" />
+          <feature type="I2S" n="1" name="I2S Interface (TX x 1ch, RX x 1ch)" />
+          <feature type="QFP" n="176" name="Plastic LQFP: FPT-176P-M07 (0.5mm pitch)" />
+          <feature type="BGA" n="192" name="Plastic FBGA: LBE192 (0.8mm pitch)" />
+        </device>
+        <!-- *************************  Device 'S6E2CC9J'  ***************************** -->
+        <device Dname="S6E2CC9J">
+          <compile header="common\s6e2ccxj.h" define="S6E2CC9J" />
+          <memory id="IROM1" start="0x00000000" size="0x180000" startup="1" default="1" />
+          <memory id="IRAM1" start="0x1FFE0000" size="0x20000" init="0" default="1" />
+          <algorithm name="example\ARM\S6E2CC_MACRO0_1024KB.FLM" start="0x00000000" size="0x100000" RAMstart="0x2003C000" RAMsize="0x1000" default="1" />
+          <algorithm name="example\ARM\S6E2CC_MACRO1_1024KB.FLM" start="0x00100000" size="0x080000" RAMstart="0x2003C000" RAMsize="0x1000" default="1" />
+          <feature type="Memory" n="0x180000" name="Flash memory" />
+          <feature type="Memory" n="0x20000" name="SRAM0" />
+          <feature type="ExtBus" n="16" name="External Bus Interface for SRAM, NOR, NAND FLash and SDRAM" />
+          <feature type="ComOther" n="1" name="High-Speed Quad SPI" />
+          <feature type="IOs" n="152" name="General Purpose I/Os" />
+          <feature type="ADC" n="32" m="12" name="AD converter" />
+          <feature type="I2S" n="1" name="I2S Interface (TX x 1ch, RX x 1ch)" />
+          <feature type="QFP" n="176" name="Plastic LQFP: FPT-176P-M07 (0.5mm pitch)" />
+          <feature type="BGA" n="192" name="Plastic FBGA: LBE192 (0.8mm pitch)" />
+        </device>
+        <!-- *************************  Device 'S6E2CCAJ'  ***************************** -->
+        <device Dname="S6E2CCAJ">
+          <compile header="common\s6e2ccxj.h" define="S6E2CCAJ" />
+          <memory id="IROM1" start="0x00000000" size="0x200000" startup="1" default="1" />
+          <memory id="IRAM1" start="0x1FFD0000" size="0x30000" init="0" default="1" />
+          <algorithm name="example\ARM\S6E2CC_MACRO0_1024KB.FLM" start="0x00000000" size="0x100000" RAMstart="0x2003C000" RAMsize="0x1000" default="1" />
+          <algorithm name="example\ARM\S6E2CC_MACRO1_1024KB.FLM" start="0x00100000" size="0x100000" RAMstart="0x2003C000" RAMsize="0x1000" default="1" />
+          <feature type="Memory" n="0x200000" name="Flash memory" />
+          <feature type="Memory" n="0x30000" name="SRAM0" />
+          <feature type="ExtBus" n="16" name="External Bus Interface for SRAM, NOR, NAND FLash and SDRAM" />
+          <feature type="ComOther" n="1" name="High-Speed Quad SPI" />
+          <feature type="IOs" n="152" name="General Purpose I/Os" />
+          <feature type="ADC" n="32" m="12" name="AD converter" />
+          <feature type="I2S" n="1" name="I2S Interface (TX x 1ch, RX x 1ch)" />
+          <feature type="QFP" n="176" name="Plastic LQFP: FPT-176P-M07 (0.5mm pitch)" />
+          <feature type="BGA" n="192" name="Plastic FBGA: LBE192 (0.8mm pitch)" />
+        </device>
+      </subFamily>
+    </family>
+  </devices>
+  <conditions>
+    <!-- Compiler Conditions -->
+    <condition id="Compiler ARMCC">
+      <require Tcompiler="ARMCC" />
+    </condition>
+    <condition id="Compiler GCC">
+      <require Tcompiler="GCC" />
+    </condition>
+    <condition id="Compiler IAR">
+      <require Tcompiler="IAR" />
+    </condition>
+    <!-- Compiler Conditions -->
+    <condition id="IDE ARMCC">
+      <require Tcompiler="ARMCC" />
+    </condition>
+    <condition id="IDE GCC">
+      <require Tcompiler="GCC" />
+    </condition>
+    <condition id="IDE IAR">
+      <require Tcompiler="IAR" />
+    </condition>
+    <condition id="FM0P">
+      <accept Dcore="Cortex-M0+" />
+    </condition>
+    <condition id="FM3">
+      <accept Dcore="Cortex-M3" />
+    </condition>
+    <condition id="FM4">
+      <accept Dcore="Cortex-M4" />
+    </condition>
+    <condition id="FM">
+      <accept condition="FM0P" />
+      <accept condition="FM3" />
+      <accept condition="FM4" />
+      <accept condition="Compiler ARMCC" />
+      <accept condition="Compiler GCC" />
+      <accept condition="Compiler IAR" />
+      <accept condition="IDE ARMCC" />
+      <accept condition="IDE GCC" />
+      <accept condition="IDE IAR" />
+    </condition> 
+    <!-- Device Conditions -->
+    <condition id="S6E2CCXJ">
+      <description>Spansion FM S6E2CCXJ Devices</description>
+      <require Dvendor="Spansion:100" Dname="S6E2CC[89A]J" />
+      <require Cclass="Device" Cgroup="Pin Configuration" />
+      <require Cclass="Device" Cgroup="GPIO Macros" />
+      <require Cclass="Device" Cgroup="Base Types" />
+      <require Cclass="Device" Cgroup="MCU Header Files" />
+    </condition>
+    <condition id="S6E2CCXJ CMSIS">
+      <description>Spansion FM S6E2CCXJ Devices and CMSIS-CORE</description>
+      <require condition="S6E2CCXJ" />
+      <require Cclass="CMSIS" Cgroup="CORE" />
+    </condition>
+</conditions>
+  <components>
+    <component Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="S6E2CCXJ CMSIS">
+      <description>System Startup for Spansion S6E2CCXJ Devices</description>
+      <files>
+        <!-- include folder / file -->
+        <file category="include" name="common/" />
+        <file category="header" name="common/s6e2ccxj.h" />
+        <file category="header" name="example/source/mcu.h" version="1.0.0" />
+        <!-- startup / system file -->
+        <file category="source" name="example/ARM/startup_s6e2cc.s" version="1.0.0" attr="config" condition="Compiler ARMCC" />
+        <file category="source" name="example/IAR/startup_s6e2cc.s" version="1.0.0" attr="config" condition="Compiler IAR" />
+        <file category="source" name="example/iSYSTEM/startup_s6e2cc.s" version="1.0.0" attr="config" condition="Compiler GCC" />
+        <file category="source" name="common/system_s6e2cc.c" attr="config" version="1.0.0" />
+        <file category="header" name="common/system_s6e2cc.h" attr="config" version="1.0.0" />
+        <file category="source" name="example/source/main.c" select="empty main.c" attr="template" version="1.0.0" />
+      </files>
+    </component>
+    <component Cclass="Device" Cgroup="Pin Configuration" Cversion="1.0.0" condition="S6E2CCXJ">
+      <description>Pin Configuration</description>
+      <files>
+        <file category="include" name="example/source/config/" />
+        <file category="source" name="example/source/config/iomux.c" attr="config" version="1.0.0" />
+        <file category="header" name="example/source/config/iomux.h" attr="config" version="1.0.0" />
+      </files>
+    </component>
+    <component Cclass="Device" Cgroup="GPIO Macros" Cversion="1.0.0" condition="S6E2CCXJ">
+      <description>GPIO Macros</description>
+      <files>
+        <file category="include" name="common/" />
+        <file category="header" name="common/gpio.h" version="1.0.0" />
+        <file category="header" name="common/fgpio.h" version="1.0.0" condition="FM0P" />
+        <file category="header" name="common/gpio_s6e2ccxj.h" version="1.0.0" />
+      </files>
+    </component>
+    <component Cclass="Device" Cgroup="Base Types" Cversion="1.0.0" condition="FM">
+      <description>Base Type Definitions</description>
+      <files>
+        <file category="include" name="common/" />
+        <file category="header" name="common/base_types.h" version="1.0.0" />
+      </files>
+    </component>
+    <component Cclass="Device" Cgroup="MCU Header Files" Cversion="2.0.0" condition="S6E2CCXJ">
+      <description>MCU Header Files</description>
+      <files>
+        <file category="include" name="common/" />
+        <file category="include" name="example/source/" />
+        <file category="header" name="common/s6e2ccxj.h" />
+        <file category="header" name="example/source/mcu.h" version="1.0.0" />
+      </files>
+    </component>    
+</components>
+  <examples>
+  </examples>
+</package>

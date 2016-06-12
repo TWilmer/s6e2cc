@@ -1,0 +1,13 @@
+[Memory]
+Memory = SRAM0		 Memory 0x20000000 0x20006FFF RW
+Memory = SRAM1		 Memory 0x2000F000 0x2000FFFF RW
+Memory = MainFlash	 Memory 0x00000000 0x0004BFFF R
+Memory = Security    Memory 0x00100000 0x00101FFF R
+Memory = CRTrimming  Memory 0x00102000 0x00103FFF R
+Memory = BitBand0    Memory 0x22000000 0x23FFFFFF RW
+Memory = Peripheral  Memory 0x40000000 0x41FFFFFF RW
+Memory = BitBand1    Memory 0x42000000 0x43FFFFFF RW
+
+[SfrInclude]
+File = $PROJ_DIR$\..\..\svd\S6E1B8.xml
+
